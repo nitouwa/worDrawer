@@ -1,0 +1,108 @@
+/* layouts/application.html.erb */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+}
+
+.menu {
+  z-index: 999;
+  width: 100%;
+  height:60px;
+  background-color: rgb(255, 255, 227);
+  border-bottom: 2px solid rgb(252, 255, 120);
+  opacity: 0.9;
+  position: fixed;
+}
+#button {
+  width: 150px;
+  display: block;
+  font-size: 18px;
+  font-weight:bold;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgb(228, 219, 230);
+  padding: 12px 0 8px 0;
+  color: #ffffff;
+  background: rgb(215, 204, 217);
+  border-radius:5px;
+  margin: 10px 8px;
+}
+a#button:hover {
+  opacity: 0.8;
+}
+
+.title {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  padding: 60px 0 0 0;
+  background-image: url("bg01.png");
+  background-repeat: repeat;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  opacity: 0.9;
+}
+
+.contents {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  /*サイト全体を中央表示にする*/
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+/* views/words/_word.html.erb */
+.text {
+  color: black;
+}
+.red_1 {
+  color: rgb(255, 55, 133);
+  border: 2px solid rgb(255, 55, 133);
+  border-radius:10px;
+  padding: 18px;
+}
+.yellow_2 {
+  color: rgb(250, 193, 117);
+  border: 2px solid rgb(250, 193, 117);
+  border-radius:10px;
+  padding: 18px;
+}
+.blue_3 {
+  color: rgb(88, 236, 179);
+  border: 2px solid rgb(88, 236, 179);
+  border-radius:10px;
+  padding: 18px;
+}
+.white_4 {
+  color: gray;
+  border: 2px solid gray;
+  border-radius:10px;
+  padding: 18px;
+}
+
+/* others */
+.notification {
+  color: rgb(91, 219, 223);
+  border: 2px solid rgb(91, 219, 223);
+  padding-left: 20px;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

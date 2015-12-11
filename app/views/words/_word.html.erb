@@ -1,0 +1,25 @@
+<% @words.each do |word| %>
+  <% if word.status == "1" %>
+  <div class="red_1">
+    <b>★ <%= word.word %></b>
+    <span class="text">｜<%= word.category %><br /><br /><%= word.text %></span>
+  </div>
+  <% elsif word.status == "2" %>
+  <div class="yellow_2">
+    <b>★ <%= word.word %></b>
+    <span class="text">｜<%= word.category %><br /><br /><%= word.text %></span>
+  </div>
+  <% elsif word.status == "3" %>
+  <div class="blue_3">
+    <b>★ <%= word.word %></b>
+    <span class="text">｜<%= word.category %><br /><br /><%= word.text %></span>
+  </div>
+  <% elsif word.status == "4" %>
+  <div class="white_4">
+    <b>★ <%= word.word %></b>
+    <span class="text">｜<%= word.category %><br /><br /><%= word.text %></span>
+  </div>
+  <% end %>
+  <br />
+<% end %>
+<%= paginate(@words) %>

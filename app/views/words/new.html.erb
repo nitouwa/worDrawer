@@ -1,0 +1,26 @@
+<b>Words#new</b><br /><br />
+
+<%= form_for(@word) do |f| %>
+<table class="form">
+  <tr>
+    <th><%= f.label :word, "単語" %></th>
+    <td><%= f.text_field :word %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :text, "説明" %></th>
+    <td><%= f.text_area :text, :size => "50x5" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :category, "カテゴリ" %></th>
+    <td><%= f.text_field :category %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :status, "ステータス" %></th>
+    <td><%= f.radio_button :status, "1" %>あか
+    <%= f.radio_button :status, "2" %>きいろ
+    <%= f.radio_button :status, "3" %>あお
+    <%= f.radio_button :status, "4" %>しろ</td>
+  </tr>
+</table><br />
+<%= f.submit "単 語 を 登 録 す る" %>
+<% end %>

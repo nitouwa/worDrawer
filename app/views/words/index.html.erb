@@ -1,0 +1,9 @@
+<b>Words#index</b><br /><br />
+<%= link_to "単語を登録する", new_word_path %>
+<br><br>
+<% if @words.present? %>
+  <%= render partial: "word" %>
+  <!-- <%= render partial: "word", collection: @words %> -->
+<% else %>
+  <p>単語が登録されていません。</p>
+<% end %>

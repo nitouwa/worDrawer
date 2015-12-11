@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %>W o r D r a w e r</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<header>
+  <div class="menu">
+    <span style="float:left"><a href="/" id="button">w o r D r a w e r</a></span>
+    <!-- <%= link_to "w o r D r a w e r", root_path %> -->
+    <span style="float:right"><a href="" id="button">ログアウト</a></span>
+    <span style="float:right"><a href="" id="button">ユーザーページ</a></span>
+  </div>
+  <div class="title">
+  <%= image_tag "worDrawer-logo.png" %>
+  </div>
+</header>
+<body>
+  <div class="contents">
+    <%= yield %>
+  </div>
+</body>
+</html>
